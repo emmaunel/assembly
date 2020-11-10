@@ -1,7 +1,8 @@
-global start
+global _start
 
 section .text:
-start:
+
+_start:
 	mov edx, len ;message length
 	mov ecx, msg ;message to write
 	mov ebx, 1   ;file descriptor(stdout)
@@ -13,4 +14,4 @@ start:
 
 section .data:
 	msg db "Hello world!", 0xa
-	len eq $ - msg ; length of the string
+	len equ $-msg ; length of the string
